@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhijeet Saha - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #F5F5F5;
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-2xl font-light">Abhijeet Saha</div>
+            <div class="space-x-4 text-[#666666]">
+                <a href="#about" class="hover:text-black">About</a>
+                <a href="#projects" class="hover:text-black">Projects</a>
+                <a href="#contact" class="hover:text-black">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero/About Section -->
+    <section id="about" class="min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 items-center gap-8">
+            <div>
+                <h1 class="text-4xl font-light mb-4">Hi, I'm Abhijeet Saha</h1>
+                <p class="text-xl text-[#666666] mb-6">
+                    Student at Cornell University studying CS + Math. I have a passion for Operating Systems, 
+                    Machine Learning, and Distributed Computing.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="mailto:as2684@cornell.edu" class="bg-black text-white px-4 py-2 rounded-sm hover:bg-[#333333]">
+                        Contact Me
+                    </a>
+                    <a href="#projects" class="border border-black text-black px-4 py-2 rounded-sm hover:bg-gray-100">
+                        View Projects
+                    </a>
+                    <a href="Resume.pdf" target="_blank" class="border border-black text-black px-4 py-2 rounded-sm hover:bg-gray-100">
+                        View Resume
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <img src="pfp.jpg" alt="Abhijeet Saha" class="w-full object-contain">
+            </div>
+        </div>
+    </section>
+    <!-- Experiences Section -->
+    <section id="experiences" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-light text-center mb-12">Professional Experiences</h2>
+            <div class="max-w-3xl mx-auto space-y-8">
+                <!-- Experience 1: Meta -->
+                <div class="grid md:grid-cols-3 gap-4 items-start">
+                    <div class="text-[#666666]">
+                        <p class="font-semibold">May 2024 - Aug 2024</p>
+                        <p>Meta</p>
+                        <p>Menlo Park, CA</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-light mb-2">Software Engineer Intern</h3>
+                        <ul class="text-[#666666] list-disc list-inside space-y-2">
+                            <li>Worked in the Asset Discovery - Foundations team under the Privacy Infra Group</li>
+                            <li>Created an efficient thread-safe tracer in C++ for resource usage metrics on various services</li>
+                            <li>Used logged metrics to create a dashboard for tracking spikes in resource usage</li>
+                            <li>Identified and refactored inefficient implementations, reducing memory usage significantly</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2: Roblox -->
+                <div class="grid md:grid-cols-3 gap-4 items-start">
+                    <div class="text-[#666666]">
+                        <p class="font-semibold">May 2023 - Aug 2023</p>
+                        <p>Roblox</p>
+                        <p>San Mateo, CA</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-light mb-2">Software Engineer Intern</h3>
+                        <ul class="text-[#666666] list-disc list-inside space-y-2">
+                            <li>Improved game search by downranking low-quality clones of popular games</li>
+                            <li>Created a pipeline using PyTorch and RobloxML to produce semantic CLIP embeddings</li>
+                            <li>Implemented MMR search diversification algorithm to reduce clones and improve relevance</li>
+                            <li>Increased qualified click-through rate (QCTR) by 4% in controlled A/B tests</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 3: MIT Lincoln Laboratory -->
+                <div class="grid md:grid-cols-3 gap-4 items-start">
+                    <div class="text-[#666666]">
+                        <p class="font-semibold">Jun 2020 - Aug 2020</p>
+                        <p>MIT Lincoln Laboratory</p>
+                        <p>Lexington, MA</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-light mb-2">Independent Researcher</h3>
+                        <ul class="text-[#666666] list-disc list-inside space-y-2">
+                            <li>Developed a proximity detection model for COVID-19 using BLE signals</li>
+                            <li>Predicted real-time distance between BLE transmitters using signal strength</li>
+                            <li>Achieved 96% accuracy using only 10 most recent real-time BLE measurements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-light text-center mb-12">My Projects</h2>
+            <div class="max-w-2xl mx-auto space-y-8">
+                <!-- Project -->
+                <div class="bg-[#F5F5F5] shadow-md rounded-sm p-6">
+                    <h3 class="text-xl font-light mb-4">DSLabs</h3>
+                    <p class="text-[#666666] mb-4">
+                        Completed <a href="https://github.com/emichael/dslabs" target="_blank" class="text-black hover:underline">DSLabs</a>, implementing protocols for Client-Server RPC’s, Primary-Backup state machine replication, Paxos for fault-tolerant consensus among replicas, and a Sharded Key/Value Service using Paxos.
+                    </p>
+                    <a href="#projects" class="text-black hover:underline">
+                        Course sensitive code
+                    </a>
+                </div>
+                <!-- Project -->
+                <div class="bg-[#F5F5F5] shadow-md rounded-sm p-6">
+                    <h3 class="text-xl font-light mb-4">EGOS</h3>
+                    <p class="text-[#666666] mb-4">
+                        Earth and Grass Operating System: implementing User-Level Threading, 
+                        Interrupts and Exceptions, RAID4 interface, and a FAT File System.
+                    </p>
+                    <a href="#projects" class="text-black hover:underline">
+                        Course sensitive code
+                    </a>
+                </div>
+                <!-- Project -->
+                <div class="bg-[#F5F5F5] shadow-md rounded-sm p-6">
+                    <h3 class="text-xl font-light mb-4">Vortex</h3>
+                    <p class="text-[#666666] mb-4">
+                        A modern text editor implemented in OCaml featuring cursor control, 
+                        word completion, find and replace, and file saving functionality.
+                    </p>
+                    <a href="https://github.com/asaha01/Vortex" target="_blank" class="text-black hover:underline">View Project</a>
+                </div>
+                <!-- Project -->
+                <div class="bg-[#F5F5F5] shadow-md rounded-sm p-6">
+                    <h3 class="text-xl font-light mb-4">Cattleship</h3>
+                    <p class="text-[#666666] mb-4">
+                        A multiplayer terminal game clone of Battleship implemented in C, 
+                        featuring server and client handshakes.
+                    </p>
+                    <a href="https://github.com/asaha01/cattleship" target="_blank" class="text-black hover:underline">View Project</a>
+                </div>
+                <!-- Project -->
+                <div class="bg-[#F5F5F5] shadow-md rounded-sm p-6">
+                    <h3 class="text-xl font-light mb-4">ASK Shell</h3>
+                    <p class="text-[#666666] mb-4">
+                        Fast shell in terminal that supports forking and executing multiple commands, piping and redirection.
+                    </p>
+                    <a href="https://github.com/asaha01/shell" target="_blank" class="text-black hover:underline">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-[#F5F5F5]">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-light mb-8">Get In Touch</h2>
+            <p class="text-xl text-[#666666] mb-8">
+                Feel free to reach out for collaboration, opportunities, or just to say hello!
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:as2684@cornell.edu" class="text-2xl text-[#666666] hover:text-black">Email</a>
+                <a href="https://github.com/asaha01" target="_blank" class="text-2xl text-[#666666] hover:text-black">GitHub</a>
+                <a href="https://www.linkedin.com/in/asaha01/" target="_blank" class="text-2xl text-[#666666] hover:text-black">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-4 border-t border-[#E0E0E0]">
+        <div class="container mx-auto px-4 text-center text-[#666666]">
+            © 2024 Abhijeet Saha. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
